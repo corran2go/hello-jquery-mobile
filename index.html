@@ -17,7 +17,7 @@
     <script src="lib/jquery.mobile-1.0.1.js" type="text/javascript"></script>
   </head>
   <body>
-    <div data-role="page" id="list">
+    <div data-role="page" id="list" data-position="fixed">
       <div data-role="header">
         <h1>List</h1>
       </div>
@@ -30,23 +30,17 @@
           <li><a href="#details" data-transition="flip">Emil (flip)</a></li>
           <li><a href="#details" data-transition="fade">Friedrich (fade)</a></li>
           <li><a href="#details" data-transition="none">Gustav (none)</a></li>
-          <li><a href="#details">Heinrich</a></li>
-          <li><a href="#details">Ida</a></li>
-          <li><a href="#details">Julius</a></li>
-          <li><a href="#details">Konrad</a></li>
-          <li><a href="#details">Ludwig</a></li>
-          <li><a href="#details">Martha</a></li>
-          <li><a href="#details">Nordpol</a></li>
+          <li><a href="page2.html" data-ajax="false">Page2</a></li>
         </ul>
       </div>
-      <div data-role="footer">
+      <div data-role="footer" data-position="fixed">
         <h1>Copy Left 2012</h1>
       </div>
     </div>
     <div data-role="page" id="details">
-      <div data-role="header">
+      <div data-role="header" data-position="fixed">
+        <a href="#list" data-transition="none" data-direction="reverse" data-icon="back">Back</a>
         <h1>Details</h1>
-        <a href="#list" data-transition="none" data-direction="reverse">Back</a>
       </div>
       <div data-role="content">
         <form id="detailForm" method="POST">
@@ -67,7 +61,7 @@
           </div>
         </form>
       </div>
-      <div data-role="footer">
+      <div data-role="footer" data-position="fixed">
         <h1>Copy Left 2012</h1>
       </div>
     </div>
